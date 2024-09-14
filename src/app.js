@@ -7,7 +7,7 @@ const app = express();
 // CORS configuration
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://sign-in-frontend-six.vercel.app",
     // origin: process.env.CORS_ORIGIN,
     credentials: true, // Allow cookies and authentication information
     optionSuccessStatus:200
