@@ -7,13 +7,16 @@ const app = express();
 // CORS configuration
 app.use(
   cors({
-    origin: "https://sign-in-frontend-six.vercel.app",
-    // origin: process.env.CORS_ORIGIN,
+    // origin: "https://sign-in-frontend-six.vercel.app",
+    origin: process.env.CORS_ORIGIN,
     credentials: true, // Allow cookies and authentication information
     optionSuccessStatus:200
 
   })
 );  
+
+app.options('*', cors()); // Pre-flight requests
+
 
 // Middleware setup
 app.use(express.json({ limit: "16kb" }));
