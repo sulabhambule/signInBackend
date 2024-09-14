@@ -8,7 +8,7 @@ const app = express();
 app.use(
   cors({
     // origin: "https://sign-in-frontend-six.vercel.app",
-    origin: process.env.CORS_ORIGIN,
+    origin: "*",
     credentials: true, // Allow cookies and authentication information
     optionSuccessStatus:200
 
