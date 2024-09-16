@@ -7,13 +7,15 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://sign-in-frontend-delta.vercel.app", 
-    methods: ["POST", "GET"], 
+    origin: "https://sign-in-frontend-delta.vercel.app",
+    methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true, 
+    allowedHeaders: ["Content-Type", "Authorization"],
+    preflightContinue: false,
+    optionsSuccessStatus: 204 
   })
 );
 
-app.options('*', cors());
 
 
 app.use(express.json({ limit: "16kb" })); 
