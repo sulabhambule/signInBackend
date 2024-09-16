@@ -7,7 +7,7 @@ const app = express();
 // CORS configuration
 app.use(
   cors({
-    origin: "https://sign-in-frontend-delta.vercel.app/signup",
+    origin: "https://sign-in-frontend-delta.vercel.app/sign-up",
     // origin: "*",
     methods: ["POST", "GET"],
     credentials: true, 
