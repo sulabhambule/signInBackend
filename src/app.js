@@ -7,15 +7,13 @@ const app = express();
 // CORS configuration
 app.use(
   cors({
-    // origin: "https://sign-in-frontend-six.vercel.app",
-    origin: "*",
-    credentials: true, // Allow cookies and authentication information
-    optionSuccessStatus:200
+    origin: "https://sign-in-frontend-delta.vercel.app",
+    // origin: "*",
+    methods: ["POST", "GET"],
+    credentials: true, 
 
   })
 );  
-
-app.options('*', cors()); // Pre-flight requests
 
 
 // Middleware setup
